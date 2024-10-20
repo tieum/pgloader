@@ -6,6 +6,7 @@ name: Docker
 # documentation.
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
     # Publish semver tags as releases.
@@ -34,7 +35,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
+
 
       # Install the cosign tool (not used on PR, still installed)
       # https://github.com/sigstore/cosign-installer
